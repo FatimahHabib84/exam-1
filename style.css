@@ -2,7 +2,28 @@
     margin: 0;
     padding: 0;
 }
+body{
+    height: 50vh;
+}
+.sec1 , .sec1>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    background-color: royalblue;
+    padding: 1rem 3rem;
+    color: white;
+    border: none;
+    font-size: x-large;
+}
 @media only screen and (max-width: 600px) {
+    body{
+        background-color: gainsboro;
+    }
+    footer{
+        display: none;
+    }
     header{
         height: 10vh;
         background-color: #9d9d9d;
@@ -24,6 +45,49 @@
         background-color: black;
         width: 10vw;
         height: 1px;
+    }
+    main{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+    .sec1{
+        gap: 1vh;
+        font-size: x-large;
+        margin: 1rem;
+    }
+    .sec1>div{
+        gap: 1vh;
+    }
+    .pink{
+        grid-area: Pinkg;
+        background-color: #df2ccd;
+        
+    }
+    .black{
+        grid-area: blackg;
+        background-color: black;
+    }
+    .blue1{
+        grid-area: blue1;
+        background-color: royalblue;
+    }
+    .blue2{
+        grid-area: blue2;
+        background-color: royalblue;
+    }
+
+    .sec2{
+        padding: 2rem 1rem;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'Pinkg Pinkg'
+        'blue1 blue2'
+        'blackg blackg';
+    }
+    .sec2>div{
+        margin: 1rem;
     }
 
 }
@@ -60,11 +124,6 @@
     }
 
     /* section 1 in main */
-    .sec1 , .sec1>div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .sec1{
         gap: 10vh;
     }
@@ -74,12 +133,6 @@
     main>.sec1>div>p{
         font-size: x-large;
         text-align: center;
-    }
-    button{
-        background-color: royalblue;
-        padding: 1rem 3rem;
-        color: white;
-        border: none;
     }
 
     /* section 2 in  main */
@@ -125,6 +178,17 @@
         right: 10%;
         bottom: -50%;
         transform: translate(0 ,-50%);
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        background-color: black;
+        height: 10vh;
+        position: relative;
+        top: 30%;
     }
 
 }
